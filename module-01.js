@@ -1,4 +1,5 @@
 // Modules
+// note: module-01.js -- how import & export is done in node.
 
 // CommonJs, every file is module (by default)
 // Modules - Encapsulated Code
