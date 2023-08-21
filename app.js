@@ -1,27 +1,22 @@
-// http module - which allows to setup web server
+//npm - global command, comes with node
+// npm --version
 
-const http = require("http");
+// local dependency - use it only in this particular project
+// npm i <packageName>
 
-// create server --- createServer(callback)
-// callback -- (req,res)=>{}
-// req(request object) -- it contains incoming request
-// res(response object) -- the response that we are sending back
+// Global dependency - use it in any project
+// npm install -g <packageName>
+// sudo install -g <packageName> (mac)
 
-const server = http.createServer((req, res) => {
-  // res.write("Welcome -- learning NodeJs");
-  // after sending response / end request
-  //   res.end();
-  if (req.url === "/") {
-    res.end("Welcome -- Learning NodeJS");
-  } else if (req.url === "/about") {
-    res.end("Engineer learing backend tech");
-  } else {
-    res.end(`
-    <h1>Oops!! No page found !</h1>
-    <a href='/'>Back home </a>
-   `);
-  }
-});
+// package.json - manifest file(stores important info about project/package)
+// manual approach(create package.json in the root)
+// npm init (step by step, press enter to skip)
+// npm init -y (everything default)
 
-// port -- what port our server is gonna listening to
-server.listen(1000);
+const _ = require("lodash");
+
+const array = [1, [2, [3, [4, [5]]]]];
+
+const res = _.flattenDeep(array);
+
+console.log(res);
