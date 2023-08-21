@@ -5,7 +5,7 @@ const { readFile, writeFile } = require("fs");
 
 //readFile(path,econding,callback(err, data)=>{})
 //we get buffer if we dont put econding value
-readFile("./path-example/first.txt", "utf-8", (err, data) => {
+readFile("./module-02/path-example/first.txt", "utf-8", (err, data) => {
   if (err) {
     console.log(err);
     return;
@@ -13,7 +13,7 @@ readFile("./path-example/first.txt", "utf-8", (err, data) => {
   const first = data;
   console.log(first);
 
-  readFile("./path-example/second.txt", "utf-8", (err, data) => {
+  readFile("./module-02/path-example/second.txt", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
       return;
@@ -22,7 +22,7 @@ readFile("./path-example/first.txt", "utf-8", (err, data) => {
     console.log(second);
 
     writeFile(
-      "./path-example/async-result.txt",
+      "./module-02/path-example/async-result.txt",
       `Result:${first}, ${second}`,
       (err, data) => {
         if (err) {

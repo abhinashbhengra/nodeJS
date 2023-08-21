@@ -3,14 +3,14 @@
 const { readFileSync, writeFileSync } = require("fs");
 
 // Reading a file
-const first = readFileSync("./path-example/first.txt", "utf-8");
-const second = readFileSync("./path-example/second.txt", "utf-8");
+const first = readFileSync("./module-02/path-example/first.txt", "utf-8");
+const second = readFileSync("./module-02/path-example/second.txt", "utf-8");
 console.log(first, second);
 
 // creating a file
 // writeFileSync(path/filename,data)
 writeFileSync(
-  "./path-example/sync-result.txt",
+  "./module-02/path-example/sync-result.txt",
   `Result is : ${first}, ${second}`
 );
 
@@ -20,7 +20,7 @@ writeFileSync(
 // to append
 
 writeFileSync(
-  "./path-example/sync-result01.txt",
+  "./module-02/path-example/sync-result01.txt",
   `Result:${first}, ${second}`,
   { flag: "a" }
 );

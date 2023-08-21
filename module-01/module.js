@@ -4,10 +4,10 @@
 // CommonJs, every file is module (by default)
 // Modules - Encapsulated Code
 
-const { peter } = require("./module-01-name");
-const sayHello = require("./module-01-lib");
+const { peter } = require("./module-name");
+const sayHello = require("./module-lib");
 
-const data = require("./module-01-export");
+const data = require("./module-export");
 
 sayHello(peter);
 sayHello("Abhinash");
